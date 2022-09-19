@@ -1,0 +1,22 @@
+.cart-items {
+  padding: 9px;
+  border-radius: 15px;
+}
+
+.sumArea {
+  padding: 6px 9px;
+}
+
+.badge {
+  padding: 5px 12px !important;
+  border-radius: 15px;
+  color: white;
+}
+.invoice-table th {
+  text-align: left !important;
+}
+.invoice-table th,
+.invoice-table td {
+  padding: 5px 9px;
+  border: 1px solid rgba(138, 138, 138, 0.2);
+}

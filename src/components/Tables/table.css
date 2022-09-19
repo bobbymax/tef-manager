@@ -1,0 +1,39 @@
+.data__table-design {
+  border-radius: 15px;
+}
+
+#custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table-footer {
+  padding: 3px 9px;
+  background-color: rgb(236, 236, 236);
+}
+
+/* #custom-table td,
+#custom-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+} */
+
+#custom-table td,
+#custom-table th {
+  padding: 3px 5px;
+}
+
+#custom-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#custom-table tr:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+#custom-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+}

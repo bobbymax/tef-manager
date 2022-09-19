@@ -1,15 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './index.css';
-import App from './App';
-import { ContextProvider } from './contexts/ContextProvider';
+import "./index.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import App from "./App";
+import { ContextProvider } from "./contexts/ContextProvider";
+import { store } from "./app/store";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <ContextProvider>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </ContextProvider>
-  </React.StrictMode>,
-  document.getElementById('root'),
+  </Provider>,
+  document.getElementById("root")
 );
