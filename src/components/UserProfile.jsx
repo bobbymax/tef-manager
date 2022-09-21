@@ -7,10 +7,10 @@ import { useDispatch } from "react-redux";
 import { Button } from ".";
 import { userProfileData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
-import avatar from "../data/avatar.jpg";
+import avatar from "../data/avatar.png";
 import { disembark } from "../features/auth/userSlice";
 
-const UserProfile = () => {
+const UserProfile = ({ auth }) => {
   const { currentColor, setIsClicked, initialState } = useStateContext();
 
   const navigate = useNavigate();
@@ -43,15 +43,15 @@ const UserProfile = () => {
         <div>
           <p className="font-semibold text-xl dark:text-gray-200">
             {" "}
-            Michael Roberts{" "}
+            {auth?.name}{" "}
           </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">
             {" "}
-            Administrator{" "}
+            {auth?.designation}{" "}
           </p>
           <p className="text-gray-500 text-sm font-semibold dark:text-gray-400">
             {" "}
-            info@shop.com{" "}
+            {auth?.email}{" "}
           </p>
         </div>
       </div>

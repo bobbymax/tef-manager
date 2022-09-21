@@ -20,3 +20,48 @@
   padding: 5px 9px;
   border: 1px solid rgba(138, 138, 138, 0.2);
 }
+
+.docket {
+  width: 340px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.restuarant {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand img {
+  width: 55%;
+}
+
+.brand address {
+  font-size: 12px;
+}
+
+.topDetail {
+  width: 100%;
+}
+
+.dab {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(138, 138, 138, 0.7);
+}
+
+.cart-items {
+  width: 100%;
+}
+
+.cart-items th,
+.cart-items td {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+  padding: 9px 3px;
+  text-align: center;
+}

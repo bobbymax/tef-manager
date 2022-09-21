@@ -117,38 +117,48 @@ const Cart = () => {
             </div>
           </div>
         ))}
-        <div className="mt-3 mb-3">
-          <div className="flex justify-between items-center">
-            <p className="text-gray-500 dark:text-gray-200 uppercase text-sm">
-              vat
-            </p>
-            <p className="font-semibold">{`${subCharge * 100}%`}</p>
+        {cart?.length > 0 ? (
+          <>
+            <div className="mt-3 mb-3">
+              <div className="flex justify-between items-center">
+                <p className="text-gray-500 dark:text-gray-200 uppercase text-sm">
+                  vat
+                </p>
+                <p className="font-semibold">{`${subCharge * 100}%`}</p>
+              </div>
+              <div className="flex justify-between items-center mt-3">
+                <p className="text-gray-500 dark:text-gray-200 uppercase text-sm">
+                  Sub Total
+                </p>
+                <p className="font-semibold">
+                  {formatCurrency(total * subCharge)}
+                </p>
+              </div>
+              <div className="flex justify-between items-center mt-3">
+                <p className="text-gray-500 dark:text-gray-200 uppercase text-sm">
+                  Total
+                </p>
+                <p className="font-semibold">
+                  {formatCurrency(total + subCharge * total)}
+                </p>
+              </div>
+            </div>
+            <div className="mt-5">
+              <button
+                type="button"
+                className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 mt-5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                style={{ backgroundColor: currentColor }}
+                onClick={() => proceedToCheckout()}
+              >
+                Place Order
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="mt-3 mb-3">
+            <p>Your Cart is Empty!!</p>
           </div>
-          <div className="flex justify-between items-center mt-3">
-            <p className="text-gray-500 dark:text-gray-200 uppercase text-sm">
-              Sub Total
-            </p>
-            <p className="font-semibold">{formatCurrency(total * subCharge)}</p>
-          </div>
-          <div className="flex justify-between items-center mt-3">
-            <p className="text-gray-500 dark:text-gray-200 uppercase text-sm">
-              Total
-            </p>
-            <p className="font-semibold">
-              {formatCurrency(total + subCharge * total)}
-            </p>
-          </div>
-        </div>
-        <div className="mt-5">
-          <button
-            type="button"
-            className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 mt-5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            style={{ backgroundColor: currentColor }}
-            onClick={() => proceedToCheckout()}
-          >
-            Place Order
-          </button>
-        </div>
+        )}
       </div>
     </div>
   );

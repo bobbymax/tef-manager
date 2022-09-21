@@ -1,7 +1,8 @@
 /* eslint-disable quotes */
 export const API = {
-  url: "https://tef.test/api/",
-  production: "https://api.tef.ng/api",
+  // url: "https://tef.test/api/",
+  url: "https://api.tef.ng/api/",
+  production: "https://api.tef.ng/api/",
 };
 
 // export const config = {
