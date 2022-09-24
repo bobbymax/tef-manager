@@ -12,6 +12,7 @@ import { formatCurrency, updateCartState } from "../../resources/helpers";
 import { useStateContext } from "../../contexts/ContextProvider";
 import Alert from "../../services/classes/Alert";
 import { useCart } from "../../services/hooks";
+// import prodImg from "../../data/product2.jpg";
 
 const Menu = () => {
   const [products, setProducts] = useState([]);
@@ -37,24 +38,29 @@ const Menu = () => {
     }
   }, []);
 
+  // console.log(products);
+
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Menu" />
 
       <div className="product-area mb-4">
-        <div className="grid grid-cols-8 gap-2">
+        <div className="grid grid-cols-9 gap-4">
           {products?.map((product, i) => (
-            <div key={i} className="col-span-2 sm:col-span-2">
+            <div key={i} className="col-span-3 sm:col-span-9 md:col-span-3">
               <div className="w-full max-w-sm bg-white rounded-lg shadow-md dar:bg-gray-800 dark:border-gray-700">
                 <div className="px-5 pb-5">
-                  <h5
-                    className="text-sm uppercase mb-3 font-semibold tracking-tight text-gray-600 dark:text-white"
-                    style={{ color: currentColor }}
+                  <h2
+                    className="uppercase sm:text-sm md:text-xl mb-3 font-semibold tracking-tight text-gray-600 dark:text-white"
+                    style={{ color: currentColor, letterSpacing: 2 }}
                   >
                     {product?.title}
-                  </h5>
+                  </h2>
+                  <div className="product-image mb-3">
+                    <img src={product?.image} alt={product?.title} />
+                  </div>
                   <div className="flex justify-between items-center">
-                    <p className="text-xl font-semibold text-gray-600">
+                    <p className="text-2xl font-semibold text-gray-600">
                       {formatCurrency(product.price)}
                     </p>
                     <button
