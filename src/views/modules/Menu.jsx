@@ -57,7 +57,11 @@ const Menu = () => {
                     {product?.title}
                   </h2>
                   <div className="product-image mb-3">
-                    <img src={product?.image} alt={product?.title} />
+                    <img
+                      src={product?.image}
+                      alt={product?.title}
+                      style={{ width: "100%" }}
+                    />
                   </div>
                   <div className="flex justify-between items-center">
                     <p className="text-2xl font-semibold text-gray-600">
