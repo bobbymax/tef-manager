@@ -47,7 +47,7 @@ const Menu = () => {
       <div className="product-area mb-4">
         <div className="grid grid-cols-9 gap-4">
           {products?.map((product, i) => (
-            <div key={i} className="col-span-3 sm:col-span-9 md:col-span-3">
+            <div key={i} className="col-span-9 sm:col-span-9 md:col-span-3">
               <div className="w-full max-w-sm bg-white rounded-lg shadow-md dar:bg-gray-800 dark:border-gray-700">
                 <div className="px-5 pb-5">
                   <h2
